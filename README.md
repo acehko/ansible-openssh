@@ -11,9 +11,9 @@ Ansible role used to install and configure OpenSSH.
 - **gather_facts** is required for OS detection.
 
 ## Role Variables
-| Variable       | Default | Description                                                                         |
-|:---------------|:--------|:------------------------------------------------------------------------------------|
-| **mosh**           | `false` | Whether to install `mosh`.                                                          |                                                                                            |
+| Variable            | Default | Description                                                                         |
+|:--------------------|:--------|:------------------------------------------------------------------------------------|
+| **mosh**            | `false` | Whether to install `mosh`.                                                          |                                                                                            |
 | **server_config**   |         | Any configuration defined here will be applied to the OpenSSH Server configuration. |
 | **authorized_keys** | `[]`    | A list of authorized keys for users.                                                |
 
