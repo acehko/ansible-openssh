@@ -1,0 +1,7 @@
+---
+- name: Start OpenSSH Server
+  become: true
+  service:
+    name: sshd
+    state: started
+    enabled: true

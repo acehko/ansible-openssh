@@ -1,0 +1,14 @@
+---
+- name: Install OpenSSH Server
+  become: true
+  apt:
+    name: openssh-server
+    state: present
+  notify: Start OpenSSH Server
+
+- name: Install Mosh
+  become: true
+  apt:
+    name: mosh
+    state: present
+  when: mosh

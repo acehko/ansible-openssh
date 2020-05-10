@@ -1,0 +1,14 @@
+---
+- name: Install OpenSSH Server
+  become: true
+  pacman:
+    name: openssh
+    state: present
+  notify: Start OpenSSH Server
+
+- name: Install Mosh
+  become: true
+  pacman:
+    name: mosh
+    state: present
+  when: mosh

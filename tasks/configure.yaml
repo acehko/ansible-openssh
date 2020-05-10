@@ -1,0 +1,10 @@
+---
+- name: Configure OpenSSH Server
+  become: true
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: "^#?{{ item.key }}.*$"
+    line: "{{ item.key }} {{ item.value }}"
+  loop: "{{ server_config | dict2items }}"
+  notify: Restart OpenSSH Server
+  when: server_config is defined

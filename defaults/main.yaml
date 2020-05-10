@@ -1,0 +1,9 @@
+---
+# Whether to install Mosh.
+mosh: false
+
+# Any configuration defined here will be applied to the OpenSSH Server configuration.
+server_config:
+
+# A list of authorized keys for users.
+authorized_keys: []

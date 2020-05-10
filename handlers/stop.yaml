@@ -1,0 +1,6 @@
+---
+- name: Stop OpenSSH Server
+  become: true
+  service:
+    name: sshd
+    state: stopped
