@@ -3,7 +3,7 @@
 
 Ansible role used to install and configure OpenSSH.
 
-**Supported Platforms:**
+## Supported Platforms
 - Arch Linux
 - Debian Buster
 
