@@ -5,6 +5,6 @@
     state: present
     key: "{{ item.1 }}"
   with_subelements:
-    - "{{ authorized_keys }}"
+    - "{{ openssh_authorized_keys }}"
     - keys
   when: openssh_authorized_keys | length
