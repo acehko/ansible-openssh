@@ -18,7 +18,7 @@ galaxy_info:
     - openssh
     - ssh
     - sshd
-    - authorized_keys
+    - authorizedkeys
     - mosh
 
 dependencies: []
