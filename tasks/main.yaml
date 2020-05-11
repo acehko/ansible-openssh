@@ -1,4 +1,4 @@
 ---
-- import_tasks: install.yaml
+- include_tasks: install_{{ ansible_facts.distribution.lower() }}.yaml
 - import_tasks: configure.yaml
 - import_tasks: authorized_keys.yaml

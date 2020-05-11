@@ -7,4 +7,4 @@
   with_subelements:
     - "{{ authorized_keys }}"
     - keys
-  when: authorized_keys | length
+  when: openssh_authorized_keys | length

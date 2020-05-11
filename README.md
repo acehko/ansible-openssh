@@ -11,11 +11,11 @@ Ansible role used to install and configure OpenSSH.
 - **gather_facts** is required for OS detection.
 
 ## Role Variables
-| Variable            | Default | Description                                                                         |
-|:--------------------|:--------|:------------------------------------------------------------------------------------|
-| **mosh**            | `false` | Whether to install `mosh`.                                                          |                                                                                            |
-| **server_config**   |         | Any configuration defined here will be applied to the OpenSSH Server configuration. |
-| **authorized_keys** | `[]`    | A list of authorized keys for users.                                                |
+| Variable                    | Default | Description                                                                         |
+|:----------------------------|:--------|:------------------------------------------------------------------------------------|
+| **openssh_mosh**            | `false` | Whether to install `mosh`.                                                          |
+| **openssh_config**          |         | Any configuration defined here will be applied to the OpenSSH Server configuration. |
+| **openssh_authorized_keys** | `[]`    | A list of authorized keys for users.                                                |
 
 ## Dependencies
 None.
@@ -26,11 +26,11 @@ None.
   gather_facts: yes
   roles:
     - role: acehko.openssh
-      mosh: true
-      server_config:
+      openssh_mosh: true
+      openssh_config:
         Port: 1213
         PasswordAuthentication: "no"
-      authorized_keys:
+      openssh_authorized_keys:
         - user: user
           keys:
             - "ssh-ed25519 XXXXXXXXXXXXXXXXXXXX user@host"

@@ -11,4 +11,4 @@
   pacman:
     name: mosh
     state: present
-  when: mosh
+  when: openssh_mosh
